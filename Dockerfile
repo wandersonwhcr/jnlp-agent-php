@@ -6,3 +6,13 @@ COPY --from=jenkins/agent:3327.v868139a_d00e0-1-alpine3.22-jdk21 /usr/share/jenk
 
 RUN apk add --no-cache \
         openjdk21-jre
+
+CMD [ "java", "-jar", "/usr/share/jenkins/agent.jar" ]
+
+ENV HOME=/app
+
+USER 1000:1000
+
+VOLUME /app
+
+WORKDIR /app
