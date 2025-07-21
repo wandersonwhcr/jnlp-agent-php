@@ -1,21 +1,25 @@
 services:
 
   php84:
+    image: wandersonwhcr/jnlp-agent-php:8.4
     build:
       args:
         PHP_VERSION: 8.4
 
   php83:
+    image: wandersonwhcr/jnlp-agent-php:8.3
     build:
       args:
         PHP_VERSION: 8.3
 
   php82:
+    image: wandersonwhcr/jnlp-agent-php:8.2
     build:
       args:
         PHP_VERSION: 8.2
 
   php81:
+    image: wandersonwhcr/jnlp-agent-php:8.1
     build:
       args:
         PHP_VERSION: 8.1
