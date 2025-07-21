@@ -1,4 +1,11 @@
 services:
 
   php84:
-    build: .
+    build:
+      args:
+        PHP_VERSION: 8.4
+
+  php83:
+    build:
+      args:
+        PHP_VERSION: 8.3
