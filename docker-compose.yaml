@@ -1,0 +1,4 @@
+services:
+
+  php84:
+    build: .
