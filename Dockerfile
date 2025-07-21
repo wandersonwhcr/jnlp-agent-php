@@ -13,7 +13,8 @@ COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 COPY --from=agent /usr/share/jenkins/agent.jar /usr/share/jenkins/agent.jar
 
 RUN apk add --no-cache \
-        openjdk21-jre
+        openjdk21-jre \
+    && install -d -o 1000 -g 1000 /app
 
 CMD [ "java", "-jar", "/usr/share/jenkins/agent.jar" ]
 
